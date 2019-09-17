@@ -2,19 +2,21 @@
   <div id="app">
     <Header />
     <SearchBar />
-    <router-view />
+    <Home />
   </div>
 </template>
 
 <script>
+import Home from './components/Home.vue'
 import Header from './components/Header.vue'
 import SearchBar from './components/SearchBar.vue'
 
 export default {
   name: 'app',
   components: {
+    Home,
     Header,
-    SearchBar,
+    SearchBar
   }
 }
 </script>

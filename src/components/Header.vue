@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <a href="/"><h1>Where in the world?</h1></a>
+    <router-link to="/"><h1>Where in the world?</h1></router-link>
     <a href="#" class="darkmode"><div><img alt="moon icon" src="../assets/moon.jpg"></div><p>Dark Mode</p></a>
   </div>
 </template>
