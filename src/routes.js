@@ -5,13 +5,21 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
+    props: true,
+    meta: {
+      title: 'REST API Countries App - Homepage'
+    }
   },
   {
     path: '/:country',
     name: 'country-detail',
-    component: CountryDetail
-  }
+    component: CountryDetail,
+    props: true,
+    meta: {
+      title: 'REST API Countries App'
+    }
+  },
 ]
 
 export default routes
