@@ -45,10 +45,11 @@ export default {
   color: #111517;
   font-size: 14px;
   height: 100%;
+  background-color: #fff;
 }
 
 .darkApp {
-  background-color: #202c36;
+  background-color: #202c36 !important;
 }
 
 html {
