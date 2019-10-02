@@ -8,7 +8,7 @@ export default {
   },
   watch: {
     '$route': {
-      handler: (to, from) => {
+      handler: (to) => {
         document.title = to.meta.title || '';
       },
       immediate: true
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" :class="{ darkApp : isDarkTheme }">
     <!-- Header -->
     <div class="header" :class="{ darkHeader : isDarkTheme }">
       <div class="headerWrapper">
@@ -44,10 +44,20 @@ export default {
   text-align: center;
   color: #111517;
   font-size: 14px;
+  height: 100%;
+}
+
+.darkApp {
+  background-color: #202c36;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   margin: 0;
+  height: 100%;
 }
 
 .header {

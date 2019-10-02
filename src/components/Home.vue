@@ -52,6 +52,15 @@ export default {
         }
       })
     }
+  },
+  // Vue.JS bug with using v-model and v-on:click with a radio input so need to call this function and run a setTimeout to excute click events after input is checked
+  methods: {
+    handleFilterClick () {
+      setTimeout(() => {
+        this.showFilter = !this.showFilter;
+        this.showAllRegion = true;
+      })
+    }
   }
 }
 </script>
@@ -90,6 +99,7 @@ export default {
         <!-- Dropdown list of regions -->
         <ul v-if="showFilter" class="dropdownUL">
           <li>
+            <label for="radioAfrica">Africa
             <input 
               id="radioAfrica" 
               class="dropdownInput" 
@@ -97,9 +107,9 @@ export default {
               name="africa" 
               value="Africa" 
               v-model="region" 
-              v-on:click="showFilter = !showFilter; showAllRegion = true"
+              v-on:click="handleFilterClick"
             />
-            <label for="radioAfrica">Africa</label>
+            </label>
           </li>
           <li>
             <input 
@@ -109,7 +119,7 @@ export default {
               name="america" 
               value="America" 
               v-model="region" 
-              v-on:click="showFilter = !showFilter; showAllRegion = true"
+              v-on:click="handleFilterClick"
             />
             <label for="radioAmerica">America</label>
           </li>
@@ -121,7 +131,7 @@ export default {
               name="asia" 
               value="Asia" 
               v-model="region" 
-              v-on:click="showFilter = !showFilter; showAllRegion = true"
+              v-on:click="handleFilterClick"
             />
             <label for="radioAsia">Asia</label>
           </li>
@@ -133,7 +143,7 @@ export default {
               name="europe" 
               value="Europe" 
               v-model="region" 
-              v-on:click="showFilter = !showFilter; showAllRegion = true"
+              v-on:click="handleFilterClick"
             />
             <label for="radioEurope">Europe</label>
           </li>
@@ -145,7 +155,7 @@ export default {
               name="oceania" 
               value="Oceania" 
               v-model="region" 
-              v-on:click="showFilter = !showFilter; showAllRegion = true"
+              v-on:click="handleFilterClick"
             />
             <label for="radioOceania">Oceania</label>
           </li>
@@ -158,7 +168,7 @@ export default {
               name="all" 
               value="All Regions" 
               v-model="region" 
-              v-on:click="showFilter = !showFilter"
+              v-on:click="handleFilterClick"
             />
             <label for="radioAll">All Regions</label>
           </li>
@@ -290,10 +300,8 @@ export default {
   position: absolute;
 }
 
-.fa-angle-down {
-  position: inherit;
-  top: 130px;
-  right: 100px;
+input[type="radio"] {
+  -webkit-appearance: radio;
 }
 
 /* loading animation */
