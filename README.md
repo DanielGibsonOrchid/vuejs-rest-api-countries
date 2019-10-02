@@ -1,4 +1,15 @@
-# vuejs-rest-api-countries
+# Vue.JS App using REST API to display country data
+
+**Features include:**
+- Loading animiation before API request completes
+- Colour theme switchter (Dark Mode)
+- Search bar that automatically filters results
+- Dropdown filter
+- Individual country page with border country links
+
+This project was built for practice using Vue.JS REST API.
+The app idea comes from https://beta.frontendmentor.io/ - A HTML/CSS/JS coding challenge mentor website with community feedback on your code
+
 
 ## Project setup
 ```
