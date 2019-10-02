@@ -4,8 +4,10 @@
 - Loading animiation before API request completes
 - Colour theme switchter (Dark Mode)
 - Search bar that automatically filters results
-- Dropdown filter
-- Individual country page with border country links
+- Dropdown filter to again filter results
+- Border country links to other countries
+- A back button which is based on user history
+- Slick CSS design
 
 This project was built for practice using Vue.JS REST API.
 The app idea comes from https://beta.frontendmentor.io/ - A HTML/CSS/JS coding challenge mentor website with community feedback on your code
